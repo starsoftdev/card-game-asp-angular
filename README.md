@@ -1,3 +1,7 @@
+## Install environment for the project.
+- Used Visual studio 2022
+- Used Node.js 20.11.1
+
 1.	Backend Part, ASP.NET C#
 
 1)	Routes
