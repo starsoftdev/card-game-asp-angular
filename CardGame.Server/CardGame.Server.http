@@ -1,6 +1,9 @@
 @CardGame.Server_HostAddress = http://localhost:5031
 
-GET {{CardGame.Server_HostAddress}}/weatherforecast/
+GET {{CardGame.Server_HostAddress}}/get-all-cards/
 Accept: application/json
 
 ###
+
+POST {{CardGame.Server_HostAddress}}/compare-cards/
+Accept: application/json

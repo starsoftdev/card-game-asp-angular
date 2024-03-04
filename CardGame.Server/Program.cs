@@ -1,6 +1,4 @@
-using Serilog;
-
-
+using CardGame.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,30 +8,17 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<ICardGameService, CardGameService>();
+builder.Services.AddSingleton<CardGameGlobalService>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromDays(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
-
-Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()
-    .CreateLogger();
-try
-{
-    Log.Information("Starting web application");
-
-    builder.Host.UseSerilog();
-
-    app.UseSerilogRequestLogging();
-    //app.MapGet("/", () => "Hello World!");
-
-}
-catch (Exception ex)
-{
-    Log.Fatal(ex, "Application terminated unexpectedly");
-}
-finally
-{
-    Log.CloseAndFlush();
-}
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
@@ -51,8 +36,8 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-
 app.MapFallbackToFile("/index.html");
 
-app.Run();
+app.UseSession();
 
+app.Run();

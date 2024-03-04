@@ -1,0 +1,33 @@
+mat-grid-tile {
+  background: lightblue;
+}
+
+.card-container {
+  width: 900px;
+}
+
+.players-contaner {
+  min-width: 500px;
+}
+
+.card-item {
+  cursor: pointer;
+}
+
+.tooltip-image {
+  position: absolute;
+  font-size: 100px;
+  cursor: pointer;
+  width: calc(100% - 20px);
+}
+
+.mark-activated-game {
+  font-size: 25px;
+  margin-left: 20px;
+  color: blue;
+}
+
+.mark-activated-game.active {
+  color: red;
+  font-weight: bold;
+}

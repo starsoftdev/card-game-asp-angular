@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content>
+  <p>Please put your name</p>
+  <mat-form-field>
+    <mat-label>Player name</mat-label>
+    <input matInput [(ngModel)]="data.playerName" cdkFocusInitial>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="handleClickOk()">Ok</button>
+</mat-dialog-actions>
