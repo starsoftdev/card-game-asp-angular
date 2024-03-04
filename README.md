@@ -4,7 +4,7 @@
 
 ## Speical logic & How I developed the test project.
 
-1.	Backend Part, ASP.NET C#
+###	Backend Part, ASP.NET C#
 
 1)	Routes
 /get-game-state	-Get Game Status
@@ -101,6 +101,7 @@ public async Task<IActionResult> GetUpdateCardsWithSSE()
         await Task.Delay(1000);
     }
 }
-2.	Frontend Part, Angular 17
+
+###	Frontend Part, Angular 17
 -	I have used Angular material components for UI development.
 -	Server Side Event(SSE) is used for updating in real-time.
