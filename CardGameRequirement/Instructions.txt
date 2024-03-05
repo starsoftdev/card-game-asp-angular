@@ -1,0 +1,24 @@
+
+Objective
+Your task is to integrate a front-end Angular application with a .NET Core/C# back-end to create a fully functional 2-player memory game. This project tests your ability to synthesize front-end and back-end technologies into a single cohesive application.
+
+Front-End Project
+The front-end project is a small 2-player memory game built with Angular. It includes the game interface where players can flip cards, view scores, and start a new game. The game logic, however, will be managed by the back-end service you will create.
+
+Back-End Project
+The back-end project is a RESTful API developed with .NET Core/C#. It is responsible for managing the game state, including initializing the game, tracking player turns and scores, and handling the card matching logic.
+
+Your Task
+Review Both Projects: Start by familiarizing yourself with the given front-end and back-end projects. Understand the functionalities and requirements of each part.
+
+Back-End Setup: Implement the .NET Core/C# API according to the specifications provided. Ensure your API endpoints are correctly handling game logic and state.
+
+Front-End Integration: Modify the Angular front-end to interact with your back-end API. This includes making HTTP requests to start a new game, handle player turns, and retrieve the game state.
+
+Ensure Consistency: Make sure that the front-end and back-end are synchronized in terms of game state and logic. The front-end should accurately reflect changes made in the back-end.
+
+Error Handling: Implement proper error handling on both the front-end and back-end to manage invalid moves, server errors, and network issues gracefully.
+
+Deliverables
+A single repository containing both the modified front-end and back-end code.
+Instructions on how to run the integrated application

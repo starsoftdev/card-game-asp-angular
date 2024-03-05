@@ -110,3 +110,9 @@ public async Task<IActionResult> GetUpdateCardsWithSSE()
 ###	Frontend Part, Angular 17
 -	I have used Angular material components for UI development.
 -	Server Side Event(SSE) is used for updating in real-time.
+
+
+### Result
+![alt text](https://github.com/starsoftdev/card-game-asp-angular/blob/master/1.png?raw=true)
+![alt text](https://github.com/starsoftdev/card-game-asp-angular/blob/master/2.png?raw=true)
+

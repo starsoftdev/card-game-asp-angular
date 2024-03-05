@@ -1,0 +1,33 @@
+Siadat Software Backend Engineer Interview Project
+
+## Develop a RESTful API using .NET Core that serves as the backend for the 2-player memory game.
+The API will handle game initialization, player turns, card matching logic, score tracking, and resetting the game.
+
+Requirements:
+
+1. Game Initialization:
+
+Create an endpoint to start a new game. This should shuffle the cards and prepare the game board with 20 cards (10 pairs) placed randomly.
+Initialize player scores to 0 and randomly decide which player starts the game.
+
+2. Player Turns:
+
+Develop an endpoint to handle a player's turn where they flip two cards. The request should specify the positions of the cards being flipped.
+Implement the game logic:
+If the cards match, remove the cards from the board, award a point to the current player, and allow them to take another turn.
+If the cards do not match, flip the cards back over and switch turns to the other player.
+Ensure the state of the game is correctly maintained after each turn.
+
+3. Tracking Score and Game State:
+
+Provide an endpoint to retrieve the current state of the game, including which cards are still in play, the scores of both players, and whose turn it is.
+
+4. End Game and Reset:
+
+Implement logic to determine when the game has ended (all pairs have been matched).
+Create an endpoint to reset the game, allowing players to start a new game without restarting the server.
+
+5. Error Handling and Validation:
+
+Add appropriate error handling for invalid requests (e.g., flipping a card that doesn't exist, flipping more than two cards in a turn, taking a turn out of sequence).
+Validate requests to ensure they meet the game rules.
